@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.telefonica.plataformaconcursos.service.AsignadosLocalService" class="com.telefonica.plataformaconcursos.service.impl.AsignadosLocalServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.AsignadosService" class="com.telefonica.plataformaconcursos.service.impl.AsignadosServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.persistence.AsignadosPersistence" class="com.telefonica.plataformaconcursos.service.persistence.AsignadosPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.plataformaconcursos.service.ConcursoLocalService" class="com.telefonica.plataformaconcursos.service.impl.ConcursoLocalServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.ConcursoService" class="com.telefonica.plataformaconcursos.service.impl.ConcursoServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.persistence.ConcursoPersistence" class="com.telefonica.plataformaconcursos.service.persistence.ConcursoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.plataformaconcursos.service.EmpresaLocalService" class="com.telefonica.plataformaconcursos.service.impl.EmpresaLocalServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.EmpresaService" class="com.telefonica.plataformaconcursos.service.impl.EmpresaServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.persistence.EmpresaPersistence" class="com.telefonica.plataformaconcursos.service.persistence.EmpresaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.telefonica.plataformaconcursos.service.UsuarioLocalService" class="com.telefonica.plataformaconcursos.service.impl.UsuarioLocalServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.UsuarioService" class="com.telefonica.plataformaconcursos.service.impl.UsuarioServiceImpl" />
+	<bean id="com.telefonica.plataformaconcursos.service.persistence.UsuarioPersistence" class="com.telefonica.plataformaconcursos.service.persistence.UsuarioPersistenceImpl" parent="basePersistence" />
+</beans>

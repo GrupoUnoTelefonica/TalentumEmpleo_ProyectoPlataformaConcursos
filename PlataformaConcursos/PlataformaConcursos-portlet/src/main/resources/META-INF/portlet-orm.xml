@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.telefonica.plataformaconcursos.model.impl.AsignadosModelImpl">
+		<attributes>
+			<id name="asignadosId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="usuarioId" />
+			<basic name="concursoId" />
+			<basic name="documento" />
+			<basic name="puntuacionObtenida" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.plataformaconcursos.model.impl.ConcursoModelImpl">
+		<attributes>
+			<id name="concursoId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="nombre" />
+			<basic name="fechaInicioInscripcion">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="descripcion" />
+			<basic name="premio" />
+			<basic name="fechaFinInscripcion">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fechaPublicacionConcurso">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fechaPublicacionGanador">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fechaInicioEntrega">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fechaFinEntrega">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="empresaId" />
+			<basic name="documento" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.plataformaconcursos.model.impl.EmpresaModelImpl">
+		<attributes>
+			<id name="empresaId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="nombre" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="sectorEmpresa" />
+			<basic name="cif" />
+			<basic name="pais" />
+			<basic name="password1" />
+			<basic name="password2" />
+			<basic name="correoElectronico" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.telefonica.plataformaconcursos.model.impl.UsuarioModelImpl">
+		<attributes>
+			<id name="usuarioId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="nombre" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="apellidos" />
+			<basic name="correoElectronico" />
+			<basic name="password1" />
+			<basic name="password2" />
+			<basic name="documento" />
+			<basic name="puntuacionObtenida" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.telefonica.plataformaconcursos.model.impl.AsignadosImpl" name="Asignados">
+		<table name="asignados" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.plataformaconcursos.model.impl.ConcursoImpl" name="Concurso">
+		<table name="concurso" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.plataformaconcursos.model.impl.EmpresaImpl" name="Empresa">
+		<table name="empresa" />
+		<attributes />
+	</entity>
+	<entity class="com.telefonica.plataformaconcursos.model.impl.UsuarioImpl" name="Usuario">
+		<table name="usuario" />
+		<attributes />
+	</entity>
+</entity-mappings>

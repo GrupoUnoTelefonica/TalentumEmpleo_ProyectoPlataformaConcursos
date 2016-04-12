@@ -1,0 +1,112 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.telefonica.plataformaconcursos">
+	<namespace>PlataformaConcursos</namespace>
+	<entity name="Usuario" table="usuario" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="usuarioId" type="long" primary="true "  ></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="nombre" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="apellidos" type="String"></column>
+        <column name="correoElectronico" type="String"></column>
+        <column name="password1" type="String"></column>
+        <column name="password2" type="String"></column>
+        <column name="documento" type="String"></column>
+        <column name="puntuacionObtenida" type="String"></column>
+	</entity>
+	<entity name="Empresa" table="empresa" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="empresaId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="nombre" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="sectorEmpresa" type="String"></column>
+        <column name="cif" type="String"></column>
+        <column name="pais" type="String"></column>
+        <column name="password1" type="String"></column>
+        <column name="password2" type="String"></column>
+        <column name="correoElectronico" type="String"></column>
+	</entity>
+	<entity name="Concurso" local-service="true" table="concurso">
+
+		<!-- PK fields -->
+
+		<column name="concursoId" type="long" primary="true" id-type="increment"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="nombre" type="String"></column>
+		<column name="fechaInicioInscripcion" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="descripcion" type="String"></column>
+        <column name="premio" type="String"></column>
+        <column name="fechaFinInscripcion" type="Date"></column>
+        <column name="fechaPublicacionConcurso" type="Date"></column>
+        <column name="fechaPublicacionGanador" type="Date"></column>
+        <column name="fechaInicioEntrega" type="Date"></column>
+        <column name="fechaFinEntrega" type="Date"></column>
+        <column name="empresaId" type="long"></column>
+        <column name="documento" type="String"></column>
+        <finder name="EmpresaId" return-type="Collection">
+            <finder-column name="empresaId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="Asignados" local-service="true" table="asignados">
+
+		<!-- PK fields -->
+
+		<column name="asignadosId" type="String" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="usuarioId" type="long"></column>
+        <column name="concursoId" type="long"></column>
+        <column name="documento" type="String"></column>
+        <column name="puntuacionObtenida" type="String"></column>
+        <finder name="UsuarioId" return-type="Collection">
+            <finder-column name="usuarioId"></finder-column>
+        </finder>
+        <finder name="ConcursoId" return-type="Collection">
+            <finder-column name="concursoId"></finder-column>
+        </finder>
+
+	</entity>
+</service-builder>

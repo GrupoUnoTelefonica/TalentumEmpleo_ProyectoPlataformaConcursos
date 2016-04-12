@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.telefonica.plataformaconcursos.model.Asignados" />
+	<import class="com.telefonica.plataformaconcursos.model.Concurso" />
+	<import class="com.telefonica.plataformaconcursos.model.Empresa" />
+	<import class="com.telefonica.plataformaconcursos.model.Usuario" />
+	<class name="com.telefonica.plataformaconcursos.model.impl.AsignadosImpl" table="asignados">
+		<cache usage="read-write" />
+		<id name="asignadosId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="usuarioId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="concursoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documento" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="puntuacionObtenida" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.telefonica.plataformaconcursos.model.impl.ConcursoImpl" table="concurso">
+		<cache usage="read-write" />
+		<id name="concursoId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nombre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fechaInicioInscripcion" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="descripcion" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="premio" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fechaFinInscripcion" type="org.hibernate.type.TimestampType" />
+		<property name="fechaPublicacionConcurso" type="org.hibernate.type.TimestampType" />
+		<property name="fechaPublicacionGanador" type="org.hibernate.type.TimestampType" />
+		<property name="fechaInicioEntrega" type="org.hibernate.type.TimestampType" />
+		<property name="fechaFinEntrega" type="org.hibernate.type.TimestampType" />
+		<property name="empresaId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documento" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.telefonica.plataformaconcursos.model.impl.EmpresaImpl" table="empresa">
+		<cache usage="read-write" />
+		<id name="empresaId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nombre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="sectorEmpresa" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cif" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pais" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="password1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="password2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="correoElectronico" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.telefonica.plataformaconcursos.model.impl.UsuarioImpl" table="usuario">
+		<cache usage="read-write" />
+		<id name="usuarioId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nombre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="apellidos" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="correoElectronico" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="password1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="password2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documento" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="puntuacionObtenida" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

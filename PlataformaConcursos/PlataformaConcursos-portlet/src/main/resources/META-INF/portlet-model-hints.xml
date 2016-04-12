@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.telefonica.plataformaconcursos.model.Asignados">
+		<field name="asignadosId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="usuarioId" type="long" />
+		<field name="concursoId" type="long" />
+		<field name="documento" type="String" />
+		<field name="puntuacionObtenida" type="String" />
+	</model>
+	<model name="com.telefonica.plataformaconcursos.model.Concurso">
+		<field name="concursoId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="nombre" type="String" />
+		<field name="fechaInicioInscripcion" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="descripcion" type="String" />
+		<field name="premio" type="String" />
+		<field name="fechaFinInscripcion" type="Date" />
+		<field name="fechaPublicacionConcurso" type="Date" />
+		<field name="fechaPublicacionGanador" type="Date" />
+		<field name="fechaInicioEntrega" type="Date" />
+		<field name="fechaFinEntrega" type="Date" />
+		<field name="empresaId" type="long" />
+		<field name="documento" type="String" />
+	</model>
+	<model name="com.telefonica.plataformaconcursos.model.Empresa">
+		<field name="empresaId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="nombre" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="sectorEmpresa" type="String" />
+		<field name="cif" type="String" />
+		<field name="pais" type="String" />
+		<field name="password1" type="String" />
+		<field name="password2" type="String" />
+		<field name="correoElectronico" type="String" />
+	</model>
+	<model name="com.telefonica.plataformaconcursos.model.Usuario">
+		<field name="usuarioId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="nombre" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="apellidos" type="String" />
+		<field name="correoElectronico" type="String" />
+		<field name="password1" type="String" />
+		<field name="password2" type="String" />
+		<field name="documento" type="String" />
+		<field name="puntuacionObtenida" type="String" />
+	</model>
+</model-hints>
